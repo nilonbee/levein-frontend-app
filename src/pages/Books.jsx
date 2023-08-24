@@ -5,17 +5,12 @@ import { useGlobalContext } from "../context/context";
 
 import getApiData from "../api-service/getdataApi";
 import Book from "../components/Book";
+import { AntDesignOutlined } from "@ant-design/icons";
 
 export default function Books() {
   // State to store the fetched books
-  const {
-    books,
-    page,
-    setPage,
-    totalBooks,
-    limit,
-    fetchBooks,
-  } = useGlobalContext();
+  const { books, page, setPage, totalBooks, limit, fetchBooks } =
+    useGlobalContext();
 
   useEffect(() => {
     // Call the fetchBooks function when the component mounts
@@ -35,15 +30,12 @@ export default function Books() {
         <div className="list-item">
           <div className="avatar">
             <Avatar
+              icon={<AntDesignOutlined />}
               style={{
                 backgroundColor: "#fde3cf",
-                color: "#f56a00",
+                color: "#1677ff",
               }}
-            >
-              <Link to={`/books/${item._id}`} style={{ display: "block" }}>
-                {item.name}
-              </Link>
-            </Avatar>
+            />
           </div>
           <Link to={`/books/${item._id}`} style={{ display: "block" }}>
             <span>{item.name}</span>

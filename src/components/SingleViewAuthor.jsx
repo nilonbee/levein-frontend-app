@@ -25,9 +25,9 @@ export default function SingleViewAuthor() {
   return (
     <div className="list-wrapper">
       {singleAuthor ? (
-        <div>
-          <h2>{singleAuthor?.author?.firstName}</h2>
-          <h2>{singleAuthor?.author?.lastName}</h2> 
+        <div className="singleView">
+          <h4>{`First Name: ${singleAuthor.author.firstName}`}</h4>
+          <h4>{`Last Name: ${singleAuthor.author.lastName}`}</h4>
         </div>
       ) : (
         <p>Loading...</p>

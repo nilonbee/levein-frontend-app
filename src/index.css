@@ -179,6 +179,7 @@ Pagination
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background-image: url('https://img.freepik.com/free-vector/hand-drawn-book-club-sale-banner_23-2149750499.jpg?w=1060&t=st=1692867531~exp=1692868131~hmac=18b9924be9f5a6ee12520c8e70ce9241e9f415b15152af45fd70e8d893799538'); */
   background-image: url('https://images.pexels.com/photos/5408713/pexels-photo-5408713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover; 
   background-position: center; 
@@ -223,15 +224,31 @@ Pagination
   font-family: 'Courier New', Courier, monospace;
  }
 
+ h4 {
+  color:hsl(206, 99%, 51%);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+ }
+
  h1 {
   color: var(--clr-white);
   font-family: 'Courier New', Courier, monospace;
+ }
+
+ .singleView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30vh;
  }
 
  .avatar {
   margin: 24px 24px;
  }
 
+ .pagination {
+  margin-top: 3rem;
+ }
 
 .nav-links {
   display: flex;
@@ -272,13 +289,23 @@ span .error {
   font-size: 12px;
 }
 
+.links {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+}
+
+.names {
+  margin-left: 12px;
+}
+
 .nav {
   display: flex;
   flex-direction: "row";
-  justify-content: space-between;
+  justify-content: space-around;
   height: 56px;
   width: 100vw;
-  background-color: bisque;
+  background-color: rgb(227, 238, 251);
 }
 
 .btn-container {
