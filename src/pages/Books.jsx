@@ -5,7 +5,7 @@ import { useGlobalContext } from "../context/context";
 
 import getApiData from "../api-service/getdataApi";
 import Book from "../components/Book";
-import { AntDesignOutlined } from "@ant-design/icons";
+import { AlipaySquareFilled } from "@ant-design/icons";
 
 export default function Books() {
   // State to store the fetched books
@@ -30,9 +30,9 @@ export default function Books() {
         <div className="list-item">
           <div className="avatar">
             <Avatar
-              icon={<AntDesignOutlined />}
+              icon={<AlipaySquareFilled />}
               style={{
-                backgroundColor: "#fde3cf",
+                backgroundColor: "#c9e5fd",
                 color: "#1677ff",
               }}
             />

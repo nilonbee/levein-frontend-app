@@ -34,7 +34,7 @@ export default function Authors() {
               <Avatar
                 icon={<AntDesignOutlined />}
                 style={{
-                  backgroundColor: "#fde3cf",
+                  backgroundColor: "#c9e5fd",
                   color: "#1677ff",
                 }}
               />

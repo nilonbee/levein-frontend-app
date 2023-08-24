@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "antd";
 import { Link, useLocation } from "react-router-dom";
-import BookForm from "./BookForm";
-import AuthorForm from "./AuthorForm";
-import Books from "../pages/Books";
-import Authors from "../pages/Authors";
 
 const Navbar = ({ openAuthorModal, openBookModal }) => {
   const location = useLocation();
@@ -15,19 +11,19 @@ const Navbar = ({ openAuthorModal, openBookModal }) => {
     <main>
       {/* title */}
       <div className="nav">
-        <div className="section-title">
-          <Link to="/">
-            <h4>Levein Book Store</h4>
-            <div className="underline"></div>
+        {/* Navbar Links */}
+        <div>
+          <Link to="/" className="title-link">
+            <span className="nav-links">Library</span>
           </Link>
         </div>
         <div>
-          <Link to="/books">
+          <Link to="/books" className="nav-link">
             <span className="nav-links">Books</span>
           </Link>
         </div>
         <div>
-          <Link to="/authors">
+          <Link to="/authors" className="nav-link">
             <span className="nav-links">Authors</span>
           </Link>
         </div>

@@ -176,11 +176,12 @@ Pagination
 }
 
 .home-page-wrapper {
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* background-image: url('https://img.freepik.com/free-vector/hand-drawn-book-club-sale-banner_23-2149750499.jpg?w=1060&t=st=1692867531~exp=1692868131~hmac=18b9924be9f5a6ee12520c8e70ce9241e9f415b15152af45fd70e8d893799538'); */
-  background-image: url('https://images.pexels.com/photos/5408713/pexels-photo-5408713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-image: url('https://images.pexels.com/photos/15357301/pexels-photo-15357301/free-photo-of-interior-of-a-bookstore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover; 
   background-position: center; 
   width: 100%;
@@ -216,7 +217,7 @@ Pagination
   padding: 12px;
   border-radius: 8;
   box-shadow: var(--light-shadow);
-  background-color: rgba(131, 220, 244, 0.333);
+  background-color: rgba(2, 36, 43, 0.333);
 }
 
  h2 {
@@ -305,7 +306,7 @@ span .error {
   justify-content: space-around;
   height: 56px;
   width: 100vw;
-  background-color: rgb(227, 238, 251);
+  background-color: rgba(226, 197, 178, 0.333);
 }
 
 .btn-container {
@@ -344,4 +345,39 @@ span .error {
     margin: 0 auto;
     max-width: 700px;
   }
+}
+
+/* Link underlining and color changes for all links */
+.title-link,
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.title-link::before,
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: blue;
+  transition: width 0.3s ease;
+}
+
+.title-link:hover::before,
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.title-link:focus::before,
+.nav-link:focus::before {
+  width: 100%;
+}
+
+.title-link:active::before,
+.nav-link:active::before {
+  background-color: darkred;
 }
