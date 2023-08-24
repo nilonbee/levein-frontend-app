@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, Pagination } from "antd";
 import { useGlobalContext } from "../context/context";
-
 import { AlipaySquareFilled } from "@ant-design/icons";
+import { useMediaQuery } from "react-responsive";
 
 export default function Books() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   // State to store the fetched books
   const { books, page, setPage, totalBooks, limit, fetchBooks } =
     useGlobalContext();
@@ -26,15 +27,17 @@ export default function Books() {
       <h2>Books</h2>
       {books?.map((item) => (
         <div className="list-item">
-          <div className="avatar">
-            <Avatar
-              icon={<AlipaySquareFilled />}
-              style={{
-                backgroundColor: "#c9e5fd",
-                color: "#1677ff",
-              }}
-            />
-          </div>
+          {!isMobile && (
+            <div className="avatar">
+              <Avatar
+                icon={<AlipaySquareFilled />}
+                style={{
+                  backgroundColor: "#c9e5fd",
+                  color: "#1677ff",
+                }}
+              />
+            </div>
+          )}
           <Link to={`/books/${item._id}`} style={{ display: "block" }}>
             <span>{item.name}</span>
           </Link>

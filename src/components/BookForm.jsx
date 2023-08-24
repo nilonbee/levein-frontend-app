@@ -25,7 +25,7 @@ const BookForm = ({ title, modalOpen, setModalOpen }) => {
       if (response.msg === "SUCCESS") {
         setLoading(false);
         await fetchBooks(page);
-        form.resetFields(); // Reset the form
+        form.resetFields();
         setModalOpen(false);
         // Close the modal
       }
