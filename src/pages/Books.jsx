@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { Avatar, Pagination } from "antd";
 import { useGlobalContext } from "../context/context";
 
-import getApiData from "../api-service/getdataApi";
-import Book from "../components/Book";
 import { AlipaySquareFilled } from "@ant-design/icons";
 
 export default function Books() {

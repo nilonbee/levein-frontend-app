@@ -306,7 +306,7 @@ span .error {
   justify-content: space-around;
   height: 56px;
   width: 100vw;
-  background-color: rgba(226, 197, 178, 0.333);
+  background-color: rgba(194, 220, 254, 0.5);
 }
 
 .btn-container {
@@ -347,7 +347,6 @@ span .error {
   }
 }
 
-/* Link underlining and color changes for all links */
 .title-link,
 .nav-link {
   text-decoration: none;

@@ -5,6 +5,7 @@ import { Avatar, Pagination } from "antd";
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
 
 export default function Authors() {
+  //imports from global state
   const {
     authors,
     page,
@@ -15,7 +16,7 @@ export default function Authors() {
   } = useGlobalContext();
 
   useEffect(() => {
-    // Call the fetchAuthors function when the component mounts
+  // Call the fetchAuthors function when the component mounts
     fetchAuthors(page);
   }, [totalAuthors, page]);
 

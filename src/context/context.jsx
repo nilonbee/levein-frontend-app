@@ -24,7 +24,27 @@ const Context = ({ children }) => {
 
   // Books
   const [books, setBooks] = useState([]);
-  const [totalBooks, setTotalBooks] = useState(0); // Total number of authors
+  const [totalBooks, setTotalBooks] = useState(0);
+
+  // Modal functions
+  const [modal1Open, setModal1Open] = useState(false);
+  const [modal2Open, setModal2Open] = useState(false);
+
+  const openBookModal = () => {
+    setModal1Open(true);
+  };
+
+  const closeBookModal = () => {
+    setModal1Open(false);
+  };
+
+  const openAuthorModal = () => {
+    setModal2Open(true);
+  };
+
+  const closeAuthorModal = () => {
+    setModal2Open(false);
+  };
 
   const fetchBooks = async (pageToFetch) => {
     try {
@@ -51,7 +71,13 @@ const Context = ({ children }) => {
           limit,
           fetchAuthors,
           books,
-          fetchBooks
+          fetchBooks,
+          modal1Open,
+          modal2Open,
+          openAuthorModal,
+          closeAuthorModal,
+          openBookModal,
+          closeBookModal,
         }}
       >
         {children}
