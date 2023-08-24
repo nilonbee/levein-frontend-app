@@ -21,7 +21,6 @@ export default function Books() {
     setPage(newPage);
   };
 
-  console.log("tempbooks", books);
   return (
     <div className="list-wrapper">
       <h2>Books</h2>

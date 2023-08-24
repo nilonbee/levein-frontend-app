@@ -8,7 +8,7 @@ import { useMediaQuery } from "react-responsive";
 export default function Authors() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   //imports from global state
-  const { authors, page, setPage, totalAuthors, limit, fetchAuthors } =
+  const { books, authors, page, setPage, totalAuthors, limit, fetchAuthors } =
     useGlobalContext();
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Authors() {
   const handlePageChange = (newPage) => {
     setPage(newPage);
   };
-
+  
   return (
     <div className="list-wrapper">
       <h2>Authors</h2>
@@ -50,13 +50,13 @@ export default function Authors() {
         </div>
       ))}
       <div className="pagination">
-        <Pagination
+        {/* <Pagination
           current={page}
           pageSize={limit}
           total={totalAuthors}
           onChange={handlePageChange}
           showSizeChanger={false}
-        />
+        /> */}
       </div>
     </div>
   );
