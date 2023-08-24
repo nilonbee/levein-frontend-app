@@ -32,12 +32,12 @@ const Navbar = ({ openAuthorModal, openBookModal }) => {
           </Link>
         </div>
         <div className="actions">
-          {currentPath === "/books" && (
+          {currentPath === "/authors" && (
             <Button type="primary" onClick={openAuthorModal} className="btn">
               Add Author
             </Button>
           )}
-          {currentPath === "/authors" && (
+          {currentPath === "/books" && (
             <Button type="primary" onClick={openBookModal} className="btn">
               Create A Book
             </Button>
