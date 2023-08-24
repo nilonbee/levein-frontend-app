@@ -13,7 +13,7 @@ const Context = ({ children }) => {
   const fetchAuthors = async (pageToFetch) => {
     try {
       const response = await getApiData(
-        `/authors/?page=${pageToFetch}&limit=${limit}`
+        `authors/?page=${pageToFetch}&limit=${limit}`
       );
       setAuthors(response.data);
       setTotalAuthors(response.NOA);
@@ -28,7 +28,7 @@ const Context = ({ children }) => {
 
   const fetchBooks = async (pageToFetch) => {
     try {
-      const tempBooks = await getApiData(`/books/?page=${pageToFetch}&limit=${limit}`);
+      const tempBooks = await getApiData(`books/?page=${pageToFetch}&limit=${limit}`);
       setBooks(tempBooks.data);
       setTotalBooks(tempBooks.NOB);
       console.log('NBooks', books);
